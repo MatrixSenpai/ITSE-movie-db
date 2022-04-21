@@ -26,11 +26,19 @@
                                     <segment title="TV Shows"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ULX-Gx-s2d">
+                                <rect key="frame" x="20" y="126" width="374" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dln-Fw-qq9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6M2-q0-U6J"/>
+                            <constraint firstItem="ULX-Gx-s2d" firstAttribute="top" secondItem="dln-Fw-qq9" secondAttribute="bottom" constant="8" symbolic="YES" id="EbR-mm-cj7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ULX-Gx-s2d" secondAttribute="trailing" constant="20" id="JD4-pz-YJF"/>
+                            <constraint firstItem="ULX-Gx-s2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Omh-pO-lay"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ULX-Gx-s2d" secondAttribute="bottom" id="Y6U-eM-mvw"/>
                             <constraint firstItem="dln-Fw-qq9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fp4-Kb-kYc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dln-Fw-qq9" secondAttribute="trailing" constant="20" id="w4t-DL-uaP"/>
                         </constraints>
@@ -42,6 +50,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="ULX-Gx-s2d" id="3bB-D5-724"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,11 +87,30 @@
                             <constraint firstItem="YJo-8D-y4q" firstAttribute="leading" secondItem="xdk-lA-QP8" secondAttribute="leading" id="xCN-cu-JOj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="WKN-rP-lW9"/>
+                    <navigationItem key="navigationItem" title="Search" id="WKN-rP-lW9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.bullet" catalog="system" id="O64-Jw-h3U"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jK9-yB-FWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1837.68115942029" y="-352.23214285714283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bum-da-CQT">
+            <objects>
+                <viewController storyboardIdentifier="search_sheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hVw-d1-r3e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jdi-dU-b8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pS2-lX-co1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOF-Rx-Dh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="-518"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a9B-VV-a8D">
@@ -102,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
